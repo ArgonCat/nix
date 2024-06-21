@@ -68,6 +68,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   security.polkit.enable = true;
 
+  programs.sway.enable = true;
+
   environment.systemPackages = with pkgs; [
     git
     wget
