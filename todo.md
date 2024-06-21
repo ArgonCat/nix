@@ -1,1 +1,1 @@
-* Get fonts working: sway, terminal -> kitty
+get neovim up to standards + learn lisp

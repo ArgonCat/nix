@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   home = {
@@ -9,11 +10,11 @@
   };
   programs.home-manager.enable = true;
 
-  programs.firefox.enable = true;
-  programs.btop.enable = true;
-
   # Nicely reload system units when configs are changed
   systemd.user.startServices = "sd-switch";
+
+  programs.firefox.enable = true;
+  programs.btop.enable = true;
 
   programs.git = {
     enable = true;
@@ -68,6 +69,13 @@
       input = {
         "type:keyboard" = { xkb_layout = "gb"; };
       };
+      keybindings = 
+        let
+          modifier = config.wayland.windowManager.sway.config.modifier;
+        in lib.mkOptionDefault {
+          "XF86MonBrightnessDown" = "exec light -U 10";
+          "XF86MonBrightnessUp" = "exec light -A 10";
+        };
     };
   };
 

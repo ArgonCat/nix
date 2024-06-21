@@ -55,7 +55,7 @@
   users.users.cat = {
     isNormalUser = true;
     description = "Joel Jinkinson";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [];
   };
 
@@ -66,9 +66,14 @@
   # $ nix search wget
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Enable polkit so that home-manager can do root stuff
   security.polkit.enable = true;
 
+  # GUI
   programs.sway.enable = true;
+  # Brightness controller
+  programs.light.enable = true;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Iosevka" ]; })
