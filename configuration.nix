@@ -70,6 +70,10 @@
 
   programs.sway.enable = true;
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Iosevka" ]; })
+  ];
+
   environment.systemPackages = with pkgs; [
     git
     wget

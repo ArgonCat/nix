@@ -15,6 +15,12 @@
   # Nicely reload system units when configs are changed
   systemd.user.startServices = "sd-switch";
 
+  programs.git = {
+    enable = true;
+    userName = "Joel Jinkinson";
+    userEmail = "joel.jinkinson@gmail.com";
+  };
+
   programs.eza = {
     enable = true;
     git = true;
@@ -46,9 +52,18 @@
     vimdiffAlias = true;
   };
 
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "Iosevka";
+      size = 12;
+    };
+  };
+
   wayland.windowManager.sway = {
     enable = true;
     config = rec {
+      terminal = "kitty";
       modifier = "Mod4";
       input = {
         "type:keyboard" = { xkb_layout = "gb"; };
