@@ -40,6 +40,8 @@
       reb = "sudo reboot";
       sht = "sudo shutdown now";
       hib = "systemctl hibernate";
+      vi = "nvim";
+      vim = "nvim";
     };
     initExtra = ''
       set -o vi
