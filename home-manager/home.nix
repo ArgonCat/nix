@@ -75,6 +75,7 @@
     };
   };
 
+  services.mako.enable = true;
   wayland.windowManager.sway = {
     enable = true;
     catppuccin.enable = true;
@@ -93,6 +94,10 @@
         };
     };
   };
+
+  home.packages = with pkgs; [
+    discord
+  ];
 
   home.stateVersion = "24.05";
 }
