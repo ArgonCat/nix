@@ -8,17 +8,17 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    nvim.url = "github:ArgonCat/nvim-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, neorg-overlay, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nvim, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        { nixpkgs.overlays = [ nvim.overlays.default ]; }
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {
-          nixpkgs.overlays = [ neorg-overlay.overlays.default ];
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.cat = import ./home-manager/home.nix;
