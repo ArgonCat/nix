@@ -23,8 +23,14 @@
     userEmail = "joel.jinkinson@gmail.com";
   };
 
+  programs.gh.enable = true;
+
   programs.neovim = {
     enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+
     plugins = with pkgs.vimPlugins; [
       neorg
 
@@ -48,8 +54,7 @@
       #  tree-sitter-lua
       #]))
     ];
-    extraConfig = ''
-      lua << EOF
+    extraLuaConfig = ''
         require("nvim-treesitter.configs").setup {
           highlight = {
             enable = true,
@@ -70,7 +75,6 @@
             },
           }
         }
-      EOF
     '';
   };
 
@@ -89,8 +93,6 @@
       reb = "sudo reboot";
       sht = "sudo shutdown now";
       hib = "systemctl hibernate";
-      vi = "nvim";
-      vim = "nvim";
     };
     initExtra = ''
       set -o vi
