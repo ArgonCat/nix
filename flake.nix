@@ -18,8 +18,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        # I have no clue why you need neorg-overlay here as well, but it works so ehhhhhh TODO
-        { nixpkgs.overlays = [ nvim.overlays.default neorg-overlay.overlays.default ]; }
+        { nixpkgs.overlays = [ nvim.overlays.default ]; }
         catppuccin.nixosModules.catppuccin
         ./configuration.nix
         home-manager.nixosModules.home-manager
