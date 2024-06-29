@@ -14,7 +14,9 @@
   # Nicely reload system units when configs are changed
   systemd.user.startServices = "sd-switch";
 
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+  };
   programs.btop.enable = true;
 
   programs.git = {
