@@ -83,7 +83,6 @@
     git
     wget
     curl
-    nvim-pkg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
