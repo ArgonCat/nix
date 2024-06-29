@@ -606,11 +606,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1719678147,
-        "narHash": "sha256-VquT2iLP3hzYD/2R73EJ/DKDsG/EbB/KTHzrZk84GnU=",
+        "lastModified": 1719686226,
+        "narHash": "sha256-5/8ITZq+sC6wvzupV1g7L2An5lkNiNtKica2PWgkB4w=",
         "owner": "ArgonCat",
         "repo": "nvim-nix",
-        "rev": "d29b81fe4d3eedda05c5be5196eb087c132bb1fe",
+        "rev": "7caa48acc0b47ef7c1480cc1a6ff55fea74276d5",
         "type": "github"
       },
       "original": {
