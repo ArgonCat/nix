@@ -8,6 +8,10 @@
   home = {
     username = "cat";
     homeDirectory = "/home/cat";
+    sessionVariables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
   };
 
   programs.home-manager.enable = true;
