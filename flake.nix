@@ -7,12 +7,15 @@
     # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nvim.url = "github:ArgonCat/nvim-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nvim, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        { nixpkgs.overlays = [nvim.overlays.default]; }
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {

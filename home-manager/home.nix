@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   lib,
@@ -37,20 +38,14 @@
       reb = "sudo reboot";
       sht = "sudo shutdown now";
       hib = "systemctl hibernate";
+      vi = "nvim";
+      vim = "nvim";
     };
     initExtra = ''
       set -o vi
       bind -m vi-command 'Control-l: clear-screen'
       bind -m vi-insert 'Control-l: clear-screen'
     '';
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
   };
 
   programs.kitty = {
