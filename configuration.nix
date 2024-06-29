@@ -59,6 +59,8 @@
     packages = with pkgs; [];
   };
 
+  catppuccin.enable = true;
+
   # Audio
   # rtkit is optional but recommended
   security.rtkit.enable = true;

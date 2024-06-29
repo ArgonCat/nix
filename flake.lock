@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1719671186,
+        "narHash": "sha256-PNbCz1bQEMOVF/AtNYRkSEHHWczlwJfZTPNXdWM3agk=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "ddeefd15d769000b54f90e11c017a0be83f31317",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -591,11 +606,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1719658317,
-        "narHash": "sha256-0ZzqI6aIodz4uiMVxW1sIS445vng0YUWi7aGB+/KPZc=",
+        "lastModified": 1719675535,
+        "narHash": "sha256-OvRTLS9gODolGA2geZRngw6CJNqj12gLZ+CRGqqwsk8=",
         "owner": "ArgonCat",
         "repo": "nvim-nix",
-        "rev": "964f10119a93674fd4364f02d249432efd578f33",
+        "rev": "215fce51ad67aae095c1e1c64b1b411be4a0443e",
         "type": "github"
       },
       "original": {
@@ -606,6 +621,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_4",

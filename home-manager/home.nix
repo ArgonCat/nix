@@ -9,15 +9,20 @@
     username = "cat";
     homeDirectory = "/home/cat";
   };
+
   programs.home-manager.enable = true;
 
   # Nicely reload system units when configs are changed
   systemd.user.startServices = "sd-switch";
 
+  catppuccin.flavor = "mocha";
+
   programs.firefox = {
     enable = true;
   };
-  programs.btop.enable = true;
+  programs.btop = {
+    enable = true;
+  };
 
   programs.git = {
     enable = true;
@@ -54,6 +59,7 @@
 
   programs.kitty = {
     enable = true;
+    catppuccin.enable = true;
     font = {
       name = "Iosevka";
       size = 12;
@@ -62,6 +68,7 @@
 
   wayland.windowManager.sway = {
     enable = true;
+    catppuccin.enable = true;
     config = {
       terminal = "kitty";
       modifier = "Mod4";
