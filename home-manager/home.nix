@@ -24,6 +24,11 @@
     enable = true;
   };
 
+  programs.starship = {
+    enable = true;
+    catppuccin.enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "Joel Jinkinson";
