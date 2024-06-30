@@ -112,6 +112,7 @@
     curl
     nvim-pkg
     just
+    ripgrep
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
