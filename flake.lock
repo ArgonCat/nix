@@ -381,11 +381,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1719737398,
-        "narHash": "sha256-UtBzHIB+S3bL8WSb+h+HGgVVkRuEPj3UA0xzNlBjAHQ=",
+        "lastModified": 1719739177,
+        "narHash": "sha256-JfP3FRMUfyTR37aTfSv3C9+ntl0vhqGEg1GaHQ02cNo=",
         "owner": "ArgonCat",
         "repo": "nvim-nix",
-        "rev": "2d02822fa815932c9db62405cceb0250b88a2535",
+        "rev": "e387c7e7c84b0805f29a6678c559006262d5da5f",
         "type": "github"
       },
       "original": {

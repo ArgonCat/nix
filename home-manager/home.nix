@@ -58,6 +58,7 @@
       hib = "systemctl hibernate";
       vi = "nvim";
       vim = "nvim";
+      note = "nvim ~/notes/index.md";
     };
     initExtra = ''
       set -o vi
