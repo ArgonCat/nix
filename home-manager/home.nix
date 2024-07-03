@@ -76,6 +76,11 @@
     };
   };
 
+  services.gpg-agent.pinentryPackage = [ pkgs.pinentry-curses ];
+  programs.password-store = {
+    enable = true;
+  };
+
   services.mako.enable = true;
   wayland.windowManager.sway = {
     enable = true;
