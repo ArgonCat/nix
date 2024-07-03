@@ -98,6 +98,7 @@
 
   home.packages = with pkgs; [
     discord
+    gcs
   ];
 
   home.stateVersion = "24.05";
