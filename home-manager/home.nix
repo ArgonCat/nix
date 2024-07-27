@@ -92,12 +92,14 @@
       input = {
         "type:keyboard" = { xkb_layout = "gb"; };
       };
+      menu = ''dmenu-wl_run'';
       keybindings = 
         let
           modifier = config.wayland.windowManager.sway.config.modifier;
         in lib.mkOptionDefault {
           "XF86MonBrightnessDown" = "exec light -U 10";
           "XF86MonBrightnessUp" = "exec light -A 10";
+          "${modifier}+p" = "exec passmenu";
         };
     };
   };
@@ -105,6 +107,8 @@
   home.packages = with pkgs; [
     discord
     gcs
+    wl-clipboard
+    dmenu-wayland
   ];
 
   home.stateVersion = "24.05";
