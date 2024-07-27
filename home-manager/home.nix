@@ -77,6 +77,7 @@
   };
 
   services.gpg-agent.pinentryPackage = [ pkgs.pinentry-curses ];
+
   programs.password-store = {
     enable = true;
   };
