@@ -86,6 +86,7 @@
     };
   };
 
+  services.printing.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -107,6 +108,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    gnumake
+    usbutils
     git
     wget
     curl
@@ -114,6 +117,8 @@
     just
     ripgrep
     pinentry-curses
+    zip
+    unzip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

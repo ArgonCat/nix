@@ -105,10 +105,13 @@
   };
 
   home.packages = with pkgs; [
+    qmk
     discord
     gcs
     wl-clipboard
     dmenu-wayland
+    feh
+    gimp
   ];
 
   home.stateVersion = "24.05";
