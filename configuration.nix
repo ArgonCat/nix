@@ -107,7 +107,10 @@
     (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
 
+  hardware.keyboard.qmk.enable = true;
+
   environment.systemPackages = with pkgs; [
+    qmk
     gnumake
     usbutils
     git
