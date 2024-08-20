@@ -106,6 +106,7 @@
 
   home.packages = with pkgs; [
     discord
+    hugo
     gcs
     wl-clipboard
     dmenu-wayland
