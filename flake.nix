@@ -15,12 +15,13 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nvim, neorg-overlay, catppuccin, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.t480s = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         { nixpkgs.overlays = [ nvim.overlays.default ]; }
         catppuccin.nixosModules.catppuccin
         ./configuration.nix
+        ./hardware-t480s.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -34,5 +35,26 @@
         }
       ];
     };
+    nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        { nixpkgs.overlays = [ nvim.overlays.default ]; }
+        catppuccin.nixosModules.catppuccin
+        ./configuration.nix
+        ./hardware-legion.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.cat = {
+            imports = [
+              ./home-manager/home.nix
+              catppuccin.homeManagerModules.catppuccin
+            ];
+          };
+        }
+      ];
+    };
+
   };
 }
