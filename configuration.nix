@@ -43,6 +43,7 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
+
   services.xserver = {
     layout = "gb";
     xkbVariant = "";
@@ -58,6 +59,7 @@
     extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [];
   };
+  services.getty.autologinUser = "cat";
 
   catppuccin.enable = true;
 
@@ -85,6 +87,8 @@
         "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
     };
   };
+
+  programs.steam.enable = true;
 
   services.printing.enable = true;
   # Allow unfree packages
